@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.layout-spacing {
+  @apply px-4 lg:px-8;
+}
+
+.custom-scroll-bar::-webkit-scrollbar {
+  @apply w-[6px] h-[6px];
+}
+
+.custom-scroll-bar::-webkit-scrollbar-track {
+  @apply my-2 mx-2 rounded-full bg-gray-100;
+}
+
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-300 cursor-grabbing;
+}
