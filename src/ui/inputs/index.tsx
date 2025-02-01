@@ -17,7 +17,7 @@ import { TextAreaInput } from "./text-area-input";
 import { SortInput, SortInputProps } from "./sort-input";
 import { TimeInput } from "./time-input";
 
-export function Input<T extends Inputs>(props: InputProps<T>): JSX.Element {
+export function Input<T extends Inputs>(props: InputProps<T>) {
   const { type } = props;
   const inputBaseProps = props as InputBaseProps;
   const checkBoxInputProps = props as CheckBoxInputProps;

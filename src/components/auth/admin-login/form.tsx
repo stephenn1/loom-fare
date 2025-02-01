@@ -20,7 +20,7 @@ export default function Form() {
     clearErrorMessage();
 
     const data = new FormData(e.currentTarget);
-    const email = "admin@loomfare.com";
+    const email = "admin@loomtrust.com";
     const password = data.get("password") as string;
 
     setIsLoading(true);

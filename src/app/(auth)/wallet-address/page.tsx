@@ -15,8 +15,8 @@ export default function WalletAddress() {
           </p>
         </div>
         <Details />
-        <h4>Tips</h4>
-        <ol className="space-y-3 text-base sm:text-lg">
+        <h4 className="font-bold text-xl">Tips</h4>
+        <ol className="space-y-3 text-base sm:text-lg list-disc pl-5">
           <li>
             This is your wallet address. Please make the deposit to reactivate
             your account.

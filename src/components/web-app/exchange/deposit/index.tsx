@@ -13,6 +13,31 @@ export default function Deposit() {
         </p>
       </div>
       <Details />
+      <h4 className="font-bold text-xl">Tips</h4>
+      <ol className="space-y-2 text-base sm:text-lg list-disc pl-5">
+        <li>
+          This is your unique wallet address for transactions. Use it to deposit
+          funds into your wallet on this platform.
+        </li>
+        <li>
+          All transactions sent to this wallet address will be credited to your
+          account balance. You can use the funds on the platform or withdraw
+          them later.
+        </li>
+        <li>
+          You can deposit from an external source of your choice, such as
+          CashApp, a Bitcoin ATM, or an exchange of you choice
+        </li>
+        <li>
+          Ensure you copy the correct wallet address or scan the QR code before
+          making a transfer. Deposits sent to the wrong address cannot be
+          recovered.
+        </li>
+        <li>
+          Transactions may take minutes to hours, depending on network traffic.
+        </li>
+        <li>For further assistance, contact support.</li>
+      </ol>
     </div>
   );
 }

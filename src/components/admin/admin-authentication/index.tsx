@@ -22,7 +22,7 @@ export default function AdminAuthentication({
 
   const handleCheckAdminAuth = () => {
     onAuthStateChanged(auth, async (user) => {
-      if (user && user.email === "admin@.com") {
+      if (user && user.email === "admin@loomtrust.com") {
         dispatch(
           setAdminUser({
             id: user?.uid,
