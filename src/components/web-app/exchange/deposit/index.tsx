@@ -14,7 +14,7 @@ export default function Deposit() {
       </div>
       <Details />
       <h4 className="font-bold text-xl">Tips</h4>
-      <ol className="space-y-2 text-base sm:text-lg list-disc pl-5">
+      <ol className="space-y-2 text-sm sm:text-base list-disc pl-5">
         <li>
           This is your unique wallet address for transactions. Use it to deposit
           funds into your wallet on this platform.
