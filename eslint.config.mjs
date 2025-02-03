@@ -14,9 +14,6 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     extends: ["next/core-web-vitals", "next/typescript"],
-    env: {
-      RESEND_API_KEY: process.env.RESEND_API_KEY,
-    },
     rules: {
       "@typescript-eslint/no-unused-expressions": "off",
       "@typescript-eslint/no-explicit-any": "off",
