@@ -20,12 +20,13 @@ export interface User {
   photoUrl: string;
   postalCode: number;
   profit: number;
-  prompt: { title: string; message: string; seen: boolean };
+  prompt: { title: string; message: string; note?: string; seen: boolean };
   state: string;
   status: AccountStatus;
   timestamp: number;
   transactions: [] | Transaction[];
   withdrawal: number;
+  agreedToTerms: boolean;
 }
 
 export interface Transaction {
@@ -59,7 +60,8 @@ export const userInitialState: User = {
   prompt: {
     title: "Welcome to LoomFare",
     message:
-      "Welcome to a platform where secure transactions, advanced features, and trusted security come together to enhance your crypto experience. Important: To complete activation and unlock all features, new users must make an initial deposit. This deposit will be added to your account balance and is fully withdrawable during your first transaction.",
+      "Welcome to a platform where secure transactions, advanced features, and trusted security come together to enhance your crypto experience.",
+    note: "New users must make an initial deposit to fully activate their wallet, unlock all features, and enable unlimited transactions. Deposited funds will be available for use on the platform or can be withdrawn later.",
     seen: false,
   },
   state: "",
@@ -67,6 +69,7 @@ export const userInitialState: User = {
   timestamp: 0,
   transactions: [],
   withdrawal: 0,
+  agreedToTerms: false,
 };
 
 const userSlice = createSlice({

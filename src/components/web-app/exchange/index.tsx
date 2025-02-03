@@ -6,6 +6,8 @@ import React from "react";
 import { PiHandDepositFill, PiHandWithdrawFill } from "react-icons/pi";
 import Deposit from "./deposit";
 import Withdrawal from "./withdrawal";
+import Transfer from "./transfer";
+import { BiTransferAlt } from "react-icons/bi";
 
 export default function Exchange() {
   const activeTab = useSearchParams().get("active_tab");
@@ -47,11 +49,27 @@ export default function Exchange() {
             }`}
           ></span>
         </Link>
+
+        <Link
+          href={"/exchange?active_tab=transfer"}
+          className={`grid grid-flow-col gap-3 items-center relative py-3  ${
+            activeTab === "transfer" ? "text-primary" : "text-gray-500"
+          }`}
+        >
+          <BiTransferAlt className="text-xl" />
+          Transfer
+          <span
+            className={`absolute w-full bg-primary h-[1px] -bottom-[1px] transition-all ${
+              activeTab === "transfer" ? "opacity-100" : "opacity-0"
+            }`}
+          ></span>
+        </Link>
       </div>
 
       {(!activeTab || activeTab === "deposit") && <Deposit />}
 
       {activeTab === "withdrawal" && <Withdrawal />}
+      {activeTab === "transfer" && <Transfer />}
     </div>
   );
 }

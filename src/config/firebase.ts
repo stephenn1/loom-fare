@@ -6,12 +6,12 @@ import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBYJWADto70ERRJ00L83nxoDShmvONcjto",
-  authDomain: "loomtrust-2c8bb.firebaseapp.com",
-  projectId: "loomtrust-2c8bb",
-  storageBucket: "loomtrust-2c8bb.firebasestorage.app",
-  messagingSenderId: "160761890808",
-  appId: "1:160761890808:web:5c83cc0d7c5da89668380d",
+  apiKey: "AIzaSyDRSnVv1TJj04Xrb5FcsCmZkJvfqm1ZWVA",
+  authDomain: "loom-fare-1fbee.firebaseapp.com",
+  projectId: "loom-fare-1fbee",
+  storageBucket: "loom-fare-1fbee.firebasestorage.app",
+  messagingSenderId: "798886601120",
+  appId: "1:798886601120:web:e1d5573b9cd683659444c5",
 };
 
 // Initialize Firebase
