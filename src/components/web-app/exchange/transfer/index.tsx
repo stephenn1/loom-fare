@@ -24,13 +24,14 @@ export default function Transfer() {
 
     setIsLoading(false);
 
-    if (docSnap.exists()) {
-      return docSnap.data();
+    if (!docSnap.exists()) {
+      setError(
+        "Transaction failed: The recipient does not exist. Please check the details and try again"
+      );
+      return setIsLoading(false);
     }
 
-    setError(
-      "Transaction failed: The recipient does not exist. Please check the details and try again"
-    );
+    return docSnap.data();
   };
 
   const handleFormInputChange = () => {
@@ -40,13 +41,13 @@ export default function Transfer() {
     const isComplete = requiredFields.every((field) =>
       Boolean(formData.get(field))
     );
-    setError("");
-    setIsSuccess(false);
     setIsFormComplete(isComplete && amount);
   };
 
   const handleFormSubmission = async (e: FormEvent<HTMLFormElement>) => {
     setIsLoading(true);
+    setError("");
+    setIsSuccess(false);
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const email = String(formData.get("email"));
@@ -59,6 +60,7 @@ export default function Transfer() {
       setError(
         "Transaction failed: The recipient is not eligible to receive transfers. A minimum deposit is required."
       );
+
       await setDoc(doc(db, "users", user.email), {
         ...user,
         transactions: [
