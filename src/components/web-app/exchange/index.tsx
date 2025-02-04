@@ -13,12 +13,12 @@ export default function Exchange() {
   const activeTab = useSearchParams().get("active_tab");
 
   return (
-    <div className="grid grid-rows-[auto_1fr] gap-5 px-5 pb-5 overflow-hidden bg-white">
+    <div className="grid grid-rows-[auto_1fr] gap-5 pb-5 overflow-hidden bg-white">
       {/* Tabs */}
-      <div className="grid grid-flow-col gap-5 justify-start items-center border-b border-gray-300">
+      <div className="grid grid-flow-col justify-start items-center border-b border-gray-300 mx-5">
         <Link
           href={"/exchange?active_tab=deposit"}
-          className={`grid grid-flow-col gap-3 items-center relative px-5 py-3 ${
+          className={`grid grid-flow-col gap-3 items-center relative px-3 sm:px-5 py-3 text-sm sm:text-base ${
             !activeTab || activeTab === "deposit"
               ? "text-primary"
               : "text-gray-500"
@@ -37,7 +37,7 @@ export default function Exchange() {
 
         <Link
           href={"/exchange?active_tab=withdrawal"}
-          className={`grid grid-flow-col gap-3 items-center relative py-3  ${
+          className={`grid grid-flow-col gap-3 items-center relative px-3 sm:px-5 py-3 text-sm sm:text-base ${
             activeTab === "withdrawal" ? "text-primary" : "text-gray-500"
           }`}
         >
@@ -52,7 +52,7 @@ export default function Exchange() {
 
         <Link
           href={"/exchange?active_tab=transfer"}
-          className={`grid grid-flow-col gap-3 items-center relative py-3  ${
+          className={`grid grid-flow-col gap-3 items-center relative px-3 sm:px-5 py-3 text-sm sm:text-base ${
             activeTab === "transfer" ? "text-primary" : "text-gray-500"
           }`}
         >
